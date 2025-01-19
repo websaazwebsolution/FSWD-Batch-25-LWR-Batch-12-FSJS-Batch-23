@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from "react-router";
+import { useCart } from './CartProvider'; // Access CartContext
+
 
 function Navbar() {
+  const { totalQuantity } = useCart(); // Get totalQuantity from CartContext
   return (
     <div><nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -17,6 +20,9 @@ function Navbar() {
 
         <li class="nav-item">
             <Link class="nav-link" to="/todos">todo</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link" to="/cart"> Cart ({totalQuantity})</Link>
         </li>
         </ul>
     </div>
