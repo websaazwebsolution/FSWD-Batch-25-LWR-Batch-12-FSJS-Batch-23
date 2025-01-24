@@ -24,6 +24,9 @@ function Navbar() {
         <li class="nav-item">
             <Link class="nav-link" to="/cart"> Cart ({totalQuantity})</Link>
         </li>
+        <li class="nav-item">
+            <Link class="nav-link" to="/weather"> weather</Link>
+        </li>
         </ul>
     </div>
   </nav></div>
