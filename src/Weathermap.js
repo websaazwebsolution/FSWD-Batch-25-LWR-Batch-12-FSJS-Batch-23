@@ -2,6 +2,7 @@ import React, { useState , useEffect} from 'react'
 import axios from 'axios'
 import Navbar from './Navbar'
 import { MapContainer, TileLayer , Marker , Popup } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'; // Import Leaflet CSS
 
 function Weathermap() {
     const [weatherData, setWeatherData] = useState([])
@@ -19,7 +20,8 @@ function Weathermap() {
                 { name: "Singapore", lat: 1.3521, lon: 103.8198 },
                 { name: "Mumbai", lat: 19.076, lon: 72.8777 },
                 { name: "Cape Town", lat: -33.9249, lon: 18.4241 },
-                { name: "Rio de Janeiro", lat: -22.9068, lon: -43.1729 }
+                { name: "Rio de Janeiro", lat: -22.9068, lon: -43.1729 },
+                {name:"Karachi", lat: 24.8607, lon: 67.0011},
             ];
          const fetcWeather = async () => {
             const data = await Promise.all(
